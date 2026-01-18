@@ -38,9 +38,11 @@ const Hero = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <Button variant="hero" size="xl" onClick={() => scrollToSection("contact")}>
-              Domluvit konzultaci
-              <ArrowRight className="ml-1" />
+            <Button variant="hero" size="xl" asChild>
+              <a href="https://calendly.com/korenek892/kratka-konzultace-jak-usetrit-cas-ve-firme" target="_blank" rel="noopener noreferrer">
+                Domluvit konzultaci
+                <ArrowRight className="ml-1" />
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" onClick={() => scrollToSection("solution")}>
               Jak to funguje
