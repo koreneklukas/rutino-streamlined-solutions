@@ -22,7 +22,7 @@ const CTA = () => {
           </p>
           
           <Button variant="hero" size="xl" asChild>
-            <a href="mailto:info@rutino.cz">
+            <a href="https://calendly.com/korenek892/kratka-konzultace-jak-usetrit-cas-ve-firme" target="_blank" rel="noopener noreferrer">
               Domluvit konzultaci
               <ArrowRight className="ml-1" />
             </a>
