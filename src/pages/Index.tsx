@@ -6,6 +6,7 @@ import Solution from "@/components/sections/Solution";
 import Services from "@/components/sections/Services";
 import Audience from "@/components/sections/Audience";
 import Differentiator from "@/components/sections/Differentiator";
+import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
         <Services />
         <Audience />
         <Differentiator />
+        <Testimonials />
         <CTA />
       </main>
       <Footer />
