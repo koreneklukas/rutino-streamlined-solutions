@@ -1,20 +1,23 @@
-import { Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_TESTIMONIALS = false;
 
 const testimonials = [
   {
-    quote: "Zde bude citace klienta o spolupráci s Rutino.",
-    author: "Jméno",
-    role: "Majitel malé firmy",
+    rating: 5,
+    quote: "Udělal pro nás vurtuální asistenky. Super komunikace a přístup",
+    author: "KeporkaProduction",
+    role: "Martin Keprt",
   },
   {
+    rating: 4.5,
     quote: "Zde bude další citace klienta.",
     author: "Jméno",
     role: "Poskytovatel služeb",
   },
   {
+    rating: 4,
     quote: "Zde bude třetí citace klienta.",
     author: "Jméno",
     role: "Živnostník",
@@ -41,7 +44,26 @@ const Testimonials = () => {
               key={index}
               className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50"
             >
-              <Quote className="w-8 h-8 text-primary/40 mb-4" />
+              <div className="flex gap-1 mb-3">
+                {[...Array(5)].map((_, i) => {
+                  const isFullStar = i < Math.floor(testimonial.rating);
+                  const isHalfStar = i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0;
+                  
+                  return (
+                    <div key={i} className="relative w-5 h-5">
+                      <Star className="w-5 h-5 text-yellow-400" />
+                      {isFullStar && (
+                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400 absolute top-0 left-0" />
+                      )}
+                      {isHalfStar && (
+                        <div className="absolute top-0 left-0 w-1/2 overflow-hidden">
+                          <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
               <p className="text-muted-foreground leading-relaxed mb-6 italic">
                 „{testimonial.quote}"
               </p>
