@@ -22,7 +22,7 @@ const Footer = () => {
               to="/ochrana-soukromi" 
               className="text-primary hover:underline"
             >
-              GDPR
+              Ochrana soukromí
             </Link>
           </p>
           
