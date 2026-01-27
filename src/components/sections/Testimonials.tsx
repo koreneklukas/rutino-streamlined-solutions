@@ -6,9 +6,15 @@ const SHOW_TESTIMONIALS = false;
 const testimonials = [
   {
     rating: 5,
+<<<<<<< HEAD
     quote: "Udělal pro nás vurtuální asistenky. Super komunikace a přístup",
     author: "KeporkaProduction",
     role: "Martin Keprt",
+=======
+    quote: "Nejlepší borec",
+    author: "Jméno",
+    role: "Majitel malé firmy",
+>>>>>>> a761b0df2c7857181177a6e2211496af93baf7a7
   },
   {
     rating: 4.5,
