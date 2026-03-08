@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_TESTIMONIALS = true;
+const SHOW_TESTIMONIALS = false;
 
 const testimonials = [
   {
