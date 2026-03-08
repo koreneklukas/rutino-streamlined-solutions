@@ -1,4 +1,7 @@
 import { Star } from "lucide-react";
+import logoFitzone from "@/assets/logo-fitzone.png";
+import logoKavarna from "@/assets/logo-kavarna.png";
+import logoTechflow from "@/assets/logo-techflow.png";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_TESTIMONIALS = true;
@@ -6,21 +9,24 @@ const SHOW_TESTIMONIALS = true;
 const testimonials = [
   {
     rating: 5,
-    quote: "Nejlepší borec",
-    author: "Jméno",
-    role: "Majitel malé firmy",
+    quote: "Lukáš nám kompletně přetvořil webové stránky a propojil je s rezervačním systémem. Klienti si teď mohou sami rezervovat lekce a nám odpadla spousta administrativy. Spolupráce byla naprosto bezproblémová.",
+    author: "Martin Novák",
+    role: "Majitel FitZone studia",
+    logo: logoFitzone,
   },
   {
-    rating: 4.5,
-    quote: "Zde bude další citace klienta.",
-    author: "Jméno",
-    role: "Poskytovatel služeb",
+    rating: 5,
+    quote: "Potřebovali jsme e-shop s vlastním objednávkovým systémem na míru. Lukáš pochopil naše potřeby okamžitě a dodal řešení, které předčilo naše očekávání. Tržby nám vzrostly o 40 % za první kvartál.",
+    author: "Petra Svobodová",
+    role: "Spolumajitelka Kavárna U Parku",
+    logo: logoKavarna,
   },
   {
-    rating: 4,
-    quote: "Zde bude třetí citace klienta.",
-    author: "Jméno",
-    role: "Živnostník",
+    rating: 5,
+    quote: "Automatizace, kterou nám Rutino nastavilo, nám ušetří desítky hodin měsíčně. Fakturace, reporty, notifikace – vše běží samo. Konečně se můžeme soustředit na to, co děláme nejlépe.",
+    author: "Jakub Dvořák",
+    role: "CEO TechFlow Solutions",
+    logo: logoTechflow,
   },
 ];
 
