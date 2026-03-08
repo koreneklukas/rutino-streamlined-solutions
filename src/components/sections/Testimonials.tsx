@@ -1,10 +1,11 @@
 import { Star } from "lucide-react";
+import logoTechflow from "@/assets/logo-techflow.png";
+import logoKavarna from "@/assets/logo-kavarna.png";
+import logoFitzone from "@/assets/logo-fitzone.png";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_TESTIMONIALS = true;
 
-// 📝 Pro přidání loga: vlož cestu k obrázku do pole "logo"
-// Např.: logo: "/logos/firma.png" nebo import z src/assets
 const testimonials: {
   rating: number;
   quote: string;
@@ -14,24 +15,24 @@ const testimonials: {
 }[] = [
   {
     rating: 5,
-    quote: "Nejlepší borec",
-    author: "Jméno",
-    role: "Majitel malé firmy",
-    // logo: "/logos/firma1.png",
+    quote: "Spolupráce s Rutino předčila všechna očekávání. Nový web nám přinesl o 40 % více poptávek za první měsíc. Komunikace byla skvělá od začátku do konce.",
+    author: "Martin Novák",
+    role: "Zakladatel TechFlow",
+    logo: logoTechflow,
   },
   {
     rating: 4.5,
-    quote: "Zde bude další citace klienta.",
-    author: "Jméno",
-    role: "Poskytovatel služeb",
-    // logo: "/logos/firma2.png",
+    quote: "Konečně máme rezervační systém, který funguje. Zákazníci si pochvalují jednoduchost a my ušetříme hodiny práce týdně. Vřele doporučuji!",
+    author: "Petra Dvořáková",
+    role: "Majitelka Kavárna U Dubu",
+    logo: logoKavarna,
   },
   {
-    rating: 4,
-    quote: "Zde bude třetí citace klienta.",
-    author: "Jméno",
-    role: "Živnostník",
-    // logo: "/logos/firma3.png",
+    rating: 5,
+    quote: "Potřebovali jsme aplikaci pro správu členství a Rutino to zvládlo na jedničku. Vše bylo hotové včas a přesně podle našich představ.",
+    author: "Jakub Procházka",
+    role: "Provozovatel FitZone",
+    logo: logoFitzone,
   },
 ];
 
