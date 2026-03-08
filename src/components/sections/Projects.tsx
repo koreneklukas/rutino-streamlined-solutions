@@ -1,7 +1,7 @@
 import { ExternalLink, ArrowRight } from "lucide-react";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_PROJECTS = false;
+export const SHOW_PROJECTS = false;
 
 const projects = [
   {
