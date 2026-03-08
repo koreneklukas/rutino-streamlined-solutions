@@ -52,7 +52,7 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50">
+            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50 flex flex-col">
               <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, i) => {
                   const isFullStar = i < Math.floor(testimonial.rating);
@@ -71,7 +71,7 @@ const Testimonials = () => {
                   );
                 })}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic flex-1">„{testimonial.quote}"</p>
               <div className="border-t border-border/50 pt-4 flex items-center gap-3">
                 {testimonial.logo && (
                   <img
