@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { default as SHOW_PROJECTS } from "@/components/sections/Projects";
+import { SHOW_PROJECTS } from "@/components/sections/Projects";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
