@@ -1,4 +1,5 @@
 import { Lightbulb, Heart, Handshake } from "lucide-react";
+import aboutPhoto from "@/assets/about-photo.jpg";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_ABOUT = true;
@@ -30,19 +31,33 @@ const AboutMe = () => {
     <section id="about" className="py-24 md:py-32">
       <div className="container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
             Kdo za Rutino <span className="text-gradient">stojí</span>
           </h2>
 
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Jmenuji se [Jméno] a pomáhám malým firmám a živnostníkům zjednodušit jejich každodenní práci pomocí
-              digitálních nástrojů.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Než jsem založil Rutino, viděl jsem, jak spousta šikovných lidí tráví hodiny rutinní prací, kterou by
-              zvládl jednoduchý systém. Rozhodl jsem se to změnit.
-            </p>
+          <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+            {/* Fotka */}
+            <div className="shrink-0">
+              <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-elevated ring-4 ring-accent">
+                <img
+                  src={aboutPhoto}
+                  alt="Zakladatel Rutino"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+
+            {/* Text */}
+            <div className="text-center md:text-left">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Jmenuji se [Jméno] a pomáhám malým firmám a živnostníkům zjednodušit jejich každodenní práci pomocí
+                digitálních nástrojů.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Než jsem založil Rutino, viděl jsem, jak spousta šikovných lidí tráví hodiny rutinní prací, kterou by
+                zvládl jednoduchý systém. Rozhodl jsem se to změnit.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
