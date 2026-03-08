@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Rutino – Landing Page
 
-## Project info
+Webová prezentace pro značku **Rutino** – jednostránkový web (SPA) postavený na Reactu.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🏗 Struktura projektu
 
-## How can I edit this code?
+```
+src/
+├── assets/                    # Obrázky a média
+│   ├── about-photo.jpg        # Fotka do sekce "O mně"
+│   ├── project-1a.jpg         # Projekt 1 – screenshot 1 (dashboard)
+│   ├── project-1b.jpg         # Projekt 1 – screenshot 2 (workflow)
+│   ├── project-2a.jpg         # Projekt 2 – screenshot 1 (web mockup)
+│   ├── project-2b.jpg         # Projekt 2 – screenshot 2 (CMS)
+│   ├── project-3a.jpg         # Projekt 3 – screenshot 1 (analytics)
+│   └── project-3b.jpg         # Projekt 3 – screenshot 2 (strategie)
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx         # Navigace
+│   │   └── Footer.tsx         # Patička
+│   ├── sections/
+│   │   ├── Hero.tsx           # Úvodní hero sekce
+│   │   ├── Problem.tsx        # Popis problému
+│   │   ├── Solution.tsx       # Nabízené řešení
+│   │   ├── Services.tsx       # Přehled služeb
+│   │   ├── Audience.tsx       # Pro koho je služba
+│   │   ├── Differentiator.tsx # Čím se lišíme
+│   │   ├── AboutMe.tsx        # O mně (s fotkou)
+│   │   ├── Projects.tsx       # Ukázky práce (carousel obrázků)
+│   │   ├── Testimonials.tsx   # Reference
+│   │   └── CTA.tsx            # Výzva k akci
+│   ├── ui/                    # shadcn/ui komponenty
+│   └── NavLink.tsx            # Navigační odkaz
+├── pages/
+│   ├── Index.tsx              # Hlavní stránka (všechny sekce)
+│   └── NotFound.tsx           # 404 stránka
+└── index.css                  # Globální styly a design tokeny
+```
 
-There are several ways of editing your application.
+## 📸 Obrázky v projektech
 
-**Use Lovable**
+Každý projekt v sekci **Ukázky naší práce** má vlastní mini carousel se 2 obrázky. Obrázky se nacházejí v `src/assets/`:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+| Projekt | Soubor | Popis |
+|---------|--------|-------|
+| Projekt 1 | `project-1a.jpg` | Dashboard s grafy a KPI |
+| Projekt 1 | `project-1b.jpg` | Workflow diagram na monitoru |
+| Projekt 2 | `project-2a.jpg` | Responzivní web na laptopu a mobilu |
+| Projekt 2 | `project-2b.jpg` | CMS rozhraní |
+| Projekt 3 | `project-3a.jpg` | Analytics dashboard s grafy |
+| Projekt 3 | `project-3b.jpg` | Strategické plánování na obrazovce |
 
-Changes made via Lovable will be committed automatically to this repo.
+Pro nahrazení za reálné screenshoty stačí přepsat soubory ve složce `src/assets/` se stejnými názvy.
 
-**Use your preferred IDE**
+## 🛠 Technologie
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **React 18** + **TypeScript**
+- **Vite** – build tool
+- **Tailwind CSS** – utility-first styling
+- **shadcn/ui** – UI komponenty
+- **Lucide React** – ikony
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## 🚀 Spuštění
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📦 Deploy
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Otevři [Lovable](https://lovable.dev) → Share → Publish.
 
-**Use GitHub Codespaces**
+## 🌐 Vlastní doména
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Project → Settings → Domains → Connect Domain.  
+Více info: [Nastavení vlastní domény](https://docs.lovable.dev/features/custom-domain#custom-domain)
