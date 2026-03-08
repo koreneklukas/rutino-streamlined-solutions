@@ -26,6 +26,18 @@ const Header = () => {
               Jak to funguje
             </button>
             <button
+              onClick={() => scrollToSection("about")}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              O mně
+            </button>
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Projekty
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
