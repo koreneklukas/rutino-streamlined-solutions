@@ -1,38 +1,26 @@
 import { Star } from "lucide-react";
-import logoTechflow from "@/assets/logo-techflow.png";
-import logoKavarna from "@/assets/logo-kavarna.png";
-import logoFitzone from "@/assets/logo-fitzone.png";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_TESTIMONIALS = true;
+const SHOW_TESTIMONIALS = false;
 
-const testimonials: {
-  rating: number;
-  quote: string;
-  author: string;
-  role: string;
-  logo?: string;
-}[] = [
+const testimonials = [
   {
     rating: 5,
-    quote: "Spolupráce s Rutino předčila všechna očekávání. Nový web nám přinesl o 40 % více poptávek za první měsíc. Komunikace byla skvělá od začátku do konce.",
-    author: "Martin Novák",
-    role: "Zakladatel TechFlow",
-    logo: logoTechflow,
+    quote: "Nejlepší borec",
+    author: "Jméno",
+    role: "Majitel malé firmy",
   },
   {
     rating: 4.5,
-    quote: "Konečně máme rezervační systém, který funguje. Zákazníci si pochvalují jednoduchost a my ušetříme hodiny práce týdně. Vřele doporučuji!",
-    author: "Petra Dvořáková",
-    role: "Majitelka Kavárna U Dubu",
-    logo: logoKavarna,
+    quote: "Zde bude další citace klienta.",
+    author: "Jméno",
+    role: "Poskytovatel služeb",
   },
   {
-    rating: 5,
-    quote: "Potřebovali jsme aplikaci pro správu členství a Rutino to zvládlo na jedničku. Vše bylo hotové včas a přesně podle našich představ.",
-    author: "Jakub Procházka",
-    role: "Provozovatel FitZone",
-    logo: logoFitzone,
+    rating: 4,
+    quote: "Zde bude třetí citace klienta.",
+    author: "Jméno",
+    role: "Živnostník",
   },
 ];
 
@@ -52,7 +40,7 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50 flex flex-col">
+            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50">
               <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, i) => {
                   const isFullStar = i < Math.floor(testimonial.rating);
@@ -71,19 +59,10 @@ const Testimonials = () => {
                   );
                 })}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic flex-1">„{testimonial.quote}"</p>
-              <div className="border-t border-border/50 pt-4 flex items-center gap-3">
-                {testimonial.logo && (
-                  <img
-                    src={testimonial.logo}
-                    alt={`Logo ${testimonial.author}`}
-                    className="w-16 h-16 object-contain rounded"
-                  />
-                )}
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
+              <div className="border-t border-border/50 pt-4">
+                <p className="font-semibold text-foreground">{testimonial.author}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
               </div>
             </div>
           ))}
