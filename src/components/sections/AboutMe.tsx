@@ -32,7 +32,7 @@ const AboutMe = () => {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-            Kdo za Rutino <span className="text-gradient">stojí</span>
+            Od vize k realizaci: <span className="text-gradient">Příběh Rutino</span>
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
@@ -45,7 +45,6 @@ const AboutMe = () => {
 
             {/* Text */}
             <div className="text-center md:text-left">
-              <h3 className="text-xl font-display font-bold mb-4">Od vize k realizaci: Příběh Rutino</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Myšlenka na vlastní business ve mně zrála několik let. Tehdy mi sice nechybělo nadšení, ale hledal jsem ten správný směr. Ten moment nastal, když se potkala má vášeň pro technologie s jasnou vizí: pomáhat firmám růst skrze chytrou modernizaci a automatizaci.
               </p>
