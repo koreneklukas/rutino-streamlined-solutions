@@ -2,7 +2,7 @@ import { Lightbulb, Heart, Handshake } from "lucide-react";
 import aboutPhoto from "@/assets/about-photo.jpg";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_ABOUT = false;
+const SHOW_ABOUT = true;
 
 const values = [
   {
