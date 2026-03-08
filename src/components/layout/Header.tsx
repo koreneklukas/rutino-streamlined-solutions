@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { SHOW_PROJECTS } from "@/components/sections/Projects";
 
 const Header = () => {
   const scrollToSection = (id: string) => {
@@ -31,12 +32,14 @@ const Header = () => {
             >
               O mně
             </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Projekty
-            </button>
+            {SHOW_PROJECTS && (
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Projekty
+              </button>
+            )}
             <button
               onClick={() => scrollToSection("contact")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
