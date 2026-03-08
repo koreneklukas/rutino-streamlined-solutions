@@ -66,9 +66,12 @@ const Testimonials = () => {
                 })}
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
-              <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">{testimonial.author}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              <div className="border-t border-border/50 pt-4 flex items-center gap-3">
+                <img src={testimonial.logo} alt={testimonial.author} className="w-16 h-16 rounded-lg object-contain" />
+                <div>
+                  <p className="font-semibold text-foreground">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}
