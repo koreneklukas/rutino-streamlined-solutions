@@ -32,12 +32,12 @@ const AboutMe = () => {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
-            Kdo za Rutino <span className="text-gradient">stojí</span>
+            Od vize k realizaci: <span className="text-gradient">Příběh Rutino</span>
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-10 mb-16">
+          <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
             {/* Fotka */}
-            <div className="shrink-0">
+            <div className="shrink-0 mx-auto md:mx-0">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-elevated ring-4 ring-accent">
                 <img
                   src={aboutPhoto}
@@ -48,14 +48,15 @@ const AboutMe = () => {
             </div>
 
             {/* Text */}
-            <div className="text-center md:text-left">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Jmenuji se [Jméno] a pomáhám malým firmám a živnostníkům zjednodušit jejich každodenní práci pomocí
-                digitálních nástrojů.
+            <div className="text-center md:text-left space-y-4">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Myšlenka na vlastní business ve mně zrála několik let. Tehdy mi sice nechybělo nadšení, ale hledal jsem ten správný směr. Ten moment nastal, když se potkala má vášeň pro technologie s jasnou vizí: pomáhat firmám růst skrze chytrou modernizaci a automatizaci.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Než jsem založil Rutino, viděl jsem, jak spousta šikovných lidí tráví hodiny rutinní prací, kterou by
-                zvládl jednoduchý systém. Rozhodl jsem se to změnit.
+                Tak vzniklo Rutino. Původní zaměření na automatizaci se díky reálným potřebám mých klientů přirozeně vyvinulo v komplexní vývoj projektů. Věřím totiž, že technologie jsou jen nástroj – to nejdůležitější je můj osobní přístup k vám.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Mým cílem je být vaším průvodcem v digitálním světě. Zakládám si na tom, že vám dokážu srozumitelně a lidsky vysvětlit, jak daná aplikace funguje, abyste vy vůbec nemuseli řešit žádné technikálie. Vy se soustředíte na svůj business, já se postarám o to, aby technologie pracovaly pro vás.
               </p>
             </div>
           </div>
