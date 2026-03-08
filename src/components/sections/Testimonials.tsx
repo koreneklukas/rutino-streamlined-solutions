@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_TESTIMONIALS = false;
+const SHOW_TESTIMONIALS = true;
 
 const testimonials = [
   {
@@ -40,21 +40,16 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50"
-            >
+            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50">
               <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, i) => {
                   const isFullStar = i < Math.floor(testimonial.rating);
                   const isHalfStar = i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0;
-                  
+
                   return (
                     <div key={i} className="relative w-5 h-5">
                       <Star className="w-5 h-5 text-yellow-400" />
-                      {isFullStar && (
-                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400 absolute top-0 left-0" />
-                      )}
+                      {isFullStar && <Star className="w-5 h-5 fill-yellow-400 text-yellow-400 absolute top-0 left-0" />}
                       {isHalfStar && (
                         <div className="absolute top-0 left-0 w-1/2 overflow-hidden">
                           <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -64,16 +59,10 @@ const Testimonials = () => {
                   );
                 })}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">
-                „{testimonial.quote}"
-              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
               <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">
-                  {testimonial.author}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role}
-                </p>
+                <p className="font-semibold text-foreground">{testimonial.author}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
               </div>
             </div>
           ))}
