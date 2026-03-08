@@ -1,13 +1,12 @@
 import { ExternalLink, ArrowRight } from "lucide-react";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_PROJECTS = false;
+const SHOW_PROJECTS = true;
 
 const projects = [
   {
     title: "Název projektu",
-    description:
-      "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
+    description: "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
     tags: ["Automatizace", "Interní systém"],
     // Obrázek: nahraď cestou k reálnému screenshotu
     image: null as string | null,
@@ -15,16 +14,14 @@ const projects = [
   },
   {
     title: "Název projektu",
-    description:
-      "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
+    description: "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
     tags: ["Web", "Digitální nástroj"],
     image: null,
     link: null,
   },
   {
     title: "Název projektu",
-    description:
-      "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
+    description: "Krátký popis projektu – co byl problém a jak jsme ho vyřešili.",
     tags: ["Analýza", "Návrh řešení"],
     image: null,
     link: null,
@@ -57,36 +54,23 @@ const Projects = () => {
               {/* Prostor pro screenshot */}
               <div className="aspect-video bg-muted flex items-center justify-center">
                 {project.image ? (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 ) : (
-                  <div className="text-muted-foreground/40 text-sm">
-                    Screenshot projektu
-                  </div>
+                  <div className="text-muted-foreground/40 text-sm">Screenshot projektu</div>
                 )}
               </div>
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-accent text-primary"
-                    >
+                    <span key={tagIndex} className="text-xs font-medium px-3 py-1 rounded-full bg-accent text-primary">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-lg font-display font-bold mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
+                <h3 className="text-lg font-display font-bold mb-2">{project.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
 
                 {project.link && (
                   <a
