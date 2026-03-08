@@ -71,7 +71,7 @@ const Testimonials = () => {
                   );
                 })}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic flex-1">„{testimonial.quote}"</p>
               <div className="border-t border-border/50 pt-4 flex items-center gap-3">
                 {testimonial.logo && (
                   <img
