@@ -3,24 +3,35 @@ import { Star } from "lucide-react";
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_TESTIMONIALS = true;
 
-const testimonials = [
+// 📝 Pro přidání loga: vlož cestu k obrázku do pole "logo"
+// Např.: logo: "/logos/firma.png" nebo import z src/assets
+const testimonials: {
+  rating: number;
+  quote: string;
+  author: string;
+  role: string;
+  logo?: string;
+}[] = [
   {
     rating: 5,
     quote: "Nejlepší borec",
     author: "Jméno",
     role: "Majitel malé firmy",
+    // logo: "/logos/firma1.png",
   },
   {
     rating: 4.5,
     quote: "Zde bude další citace klienta.",
     author: "Jméno",
     role: "Poskytovatel služeb",
+    // logo: "/logos/firma2.png",
   },
   {
     rating: 4,
     quote: "Zde bude třetí citace klienta.",
     author: "Jméno",
     role: "Živnostník",
+    // logo: "/logos/firma3.png",
   },
 ];
 
