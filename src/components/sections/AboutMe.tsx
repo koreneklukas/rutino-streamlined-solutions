@@ -45,13 +45,18 @@ const AboutMe = () => {
 
             {/* Text */}
             <div className="text-center md:text-left">
+              <h3 className="text-xl font-display font-bold mb-4">Od vize k realizaci: Příběh Rutino</h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Jmenuji se [Jméno] a pomáhám malým firmám a živnostníkům zjednodušit jejich každodenní práci pomocí
-                digitálních nástrojů.
+                Myšlenka na vlastní business ve mně zrála několik let. Tehdy mi sice nechybělo nadšení, ale hledal jsem ten správný směr. Ten moment nastal, když se potkala má vášeň pro technologie s jasnou vizí: pomáhat firmám růst skrze chytrou modernizaci a automatizaci.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Než jsem založil Rutino, viděl jsem, jak spousta šikovných lidí tráví hodiny rutinní prací, kterou by
-                zvládl jednoduchý systém. Rozhodl jsem se to změnit.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Tak vzniklo Rutino. Původní zaměření na automatizaci se díky reálným potřebám mých klientů přirozeně vyvinulo v komplexní vývoj projektů. Věřím totiž, že technologie jsou jen nástroj – to nejdůležitější je můj osobní přístup k vám.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Mým cílem je být vaším průvodcem v digitálním světě. Zakládám si na tom, že vám dokážu srozumitelně a lidsky vysvětlit, jak daná aplikace funguje, abyste vy vůbec nemuseli řešit žádné technikálie. Vy se soustředíte na svůj business, já se postarám o to, aby technologie pracovaly pro vás.
+              </p>
+              <p className="text-base font-medium text-foreground">
+                Lukáš Kořenek – zakladatel projektu Rutino
               </p>
             </div>
           </div>
