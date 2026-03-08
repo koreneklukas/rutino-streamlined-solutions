@@ -77,7 +77,7 @@ const Testimonials = () => {
                   <img
                     src={testimonial.logo}
                     alt={`Logo ${testimonial.author}`}
-                    className="w-10 h-10 object-contain rounded"
+                    className="w-12 h-12 object-contain rounded"
                   />
                 )}
                 <div>
