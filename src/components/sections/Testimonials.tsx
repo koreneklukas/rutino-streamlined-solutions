@@ -3,24 +3,35 @@ import { Star } from "lucide-react";
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
 const SHOW_TESTIMONIALS = true;
 
-const testimonials = [
+// 📝 Pro přidání loga: vlož cestu k obrázku do pole "logo"
+// Např.: logo: "/logos/firma.png" nebo import z src/assets
+const testimonials: {
+  rating: number;
+  quote: string;
+  author: string;
+  role: string;
+  logo?: string;
+}[] = [
   {
     rating: 5,
     quote: "Nejlepší borec",
     author: "Jméno",
     role: "Majitel malé firmy",
+    // logo: "/logos/firma1.png",
   },
   {
     rating: 4.5,
     quote: "Zde bude další citace klienta.",
     author: "Jméno",
     role: "Poskytovatel služeb",
+    // logo: "/logos/firma2.png",
   },
   {
     rating: 4,
     quote: "Zde bude třetí citace klienta.",
     author: "Jméno",
     role: "Živnostník",
+    // logo: "/logos/firma3.png",
   },
 ];
 
@@ -60,9 +71,18 @@ const Testimonials = () => {
                 })}
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
-              <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">{testimonial.author}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              <div className="border-t border-border/50 pt-4 flex items-center gap-3">
+                {testimonial.logo && (
+                  <img
+                    src={testimonial.logo}
+                    alt={`Logo ${testimonial.author}`}
+                    className="w-10 h-10 object-contain rounded"
+                  />
+                )}
+                <div>
+                  <p className="font-semibold text-foreground">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}
