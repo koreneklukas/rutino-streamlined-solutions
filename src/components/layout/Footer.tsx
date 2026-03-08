@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -17,13 +15,7 @@ const Footer = () => {
           
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Rutino. Všechna práva vyhrazena. |{" "}
-            <Link 
-              to="/ochrana-soukromi" 
-              className="text-primary hover:underline"
-            >
-              Ochrana soukromí
-            </Link>
+            © {currentYear} Rutino. Všechna práva vyhrazena.
           </p>
           
           {/* Contact */}

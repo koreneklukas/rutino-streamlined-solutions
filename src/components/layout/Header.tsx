@@ -1,35 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const Header = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const handleNavigation = (sectionId: string) => {
-    if (location.pathname === "/") {
-      // Už jsme na hlavní stránce, jen scrollujeme
-      scrollToSection(sectionId);
-    } else {
-      // Jsme na jiné stránce, přejdeme na hlavní stránku s hash
-      navigate(`/#${sectionId}`);
-    }
-  };
-
-  // Scroll na sekci po načtení stránky, pokud je v URL hash
-  useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      setTimeout(() => scrollToSection(id), 100);
-    }
-  }, [location]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -46,13 +20,13 @@ const Header = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => handleNavigation("solution")}
+              onClick={() => scrollToSection("solution")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Jak to funguje
             </button>
             <button
-              onClick={() => handleNavigation("contact")}
+              onClick={() => scrollToSection("contact")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Kontakt
@@ -60,7 +34,7 @@ const Header = () => {
           </nav>
           
           {/* CTA */}
-          <Button variant="default" size="sm" onClick={() => handleNavigation("contact")}>
+          <Button variant="default" size="sm" onClick={() => scrollToSection("contact")}>
             Konzultace
           </Button>
         </div>
