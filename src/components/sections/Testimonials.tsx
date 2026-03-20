@@ -1,26 +1,17 @@
 import { Star } from "lucide-react";
+import fotokramLogo from "/fotokram_logo.jpeg";
 
 // ⚙️ PŘEPÍNAČ: změň na true pro zobrazení sekce
-const SHOW_TESTIMONIALS = false;
+const SHOW_TESTIMONIALS = true;
 
 const testimonials = [
+
   {
     rating: 5,
-    quote: "Nejlepší borec",
-    author: "Jméno",
-    role: "Majitel malé firmy",
-  },
-  {
-    rating: 4.5,
-    quote: "Zde bude další citace klienta.",
-    author: "Jméno",
-    role: "Poskytovatel služeb",
-  },
-  {
-    rating: 4,
-    quote: "Zde bude třetí citace klienta.",
-    author: "Jméno",
-    role: "Živnostník",
+    quote: "Dlouho jsem hledala způsob, jak zefektivnit komunikaci se zákazníky. Díky nastavené automatizaci mi AI sama odpovídá na poptávky, okamžitě odesílá klientům potřebné formuláře a následně všechny informace přehledně zapisuje do kalendáře. To, co mi dřív zabralo hodiny denně, se teď děje prakticky bez mého zásahu.\n\nNejenže mi to šetří obrovské množství času, ale zároveň mám jistotu, že žádná poptávka nezůstane bez odpovědi a celý proces působí profesionálně a plynule.\n\nJsem maximálně spokojená a tuhle službu bych doporučila každému, kdo chce posunout své podnikání na vyšší úroveň a zbavit se rutinní administrativy.",
+    author: "Adéla Opletalová",
+    role: "Fotokrám",
+    logo: fotokramLogo,
   },
 ];
 
@@ -38,10 +29,10 @@ const Testimonials = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-background rounded-xl p-6 md:p-8 shadow-soft border border-border/50">
-              <div className="flex gap-1 mb-3">
+            <div key={index} className="bg-background rounded-xl p-6 md:p-10 shadow-soft border border-border/50 w-full max-w-2xl">
+              <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => {
                   const isFullStar = i < Math.floor(testimonial.rating);
                   const isHalfStar = i === Math.floor(testimonial.rating) && testimonial.rating % 1 !== 0;
@@ -59,10 +50,15 @@ const Testimonials = () => {
                   );
                 })}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{testimonial.quote}"</p>
-              <div className="border-t border-border/50 pt-4">
-                <p className="font-semibold text-foreground">{testimonial.author}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic whitespace-pre-line">„{testimonial.quote}"</p>
+              <div className="border-t border-border/50 pt-4 flex items-center gap-4">
+                {testimonial.logo && (
+                  <img src={testimonial.logo} alt={testimonial.role} className="h-10 w-auto object-contain rounded" />
+                )}
+                <div>
+                  <p className="font-semibold text-foreground">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}

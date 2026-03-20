@@ -1,0 +1,75 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F0F4FF"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D6DFFF" stroke-width="0.8"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <!-- Left: Incoming email card -->
+  <rect x="60" y="120" width="240" height="140" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="60" y="120" width="240" height="8" rx="14" fill="#6366F1"/>
+  <rect x="80" y="148" width="80" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="80" y="164" width="180" height="6" rx="3" fill="#F1F5F9"/>
+  <rect x="80" y="178" width="160" height="6" rx="3" fill="#F1F5F9"/>
+  <rect x="80" y="192" width="140" height="6" rx="3" fill="#F1F5F9"/>
+  <rect x="80" y="206" width="100" height="6" rx="3" fill="#F1F5F9"/>
+  <!-- From label -->
+  <rect x="80" y="230" width="50" height="16" rx="8" fill="#EEF2FF"/>
+  <rect x="83" y="236" width="44" height="4" rx="2" fill="#6366F1"/>
+
+  <!-- Arrow -->
+  <path d="M 310 190 L 370 190" stroke="#6366F1" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <polygon points="370,184 382,190 370,196" fill="#6366F1"/>
+
+  <!-- Center: AI / Klára circle -->
+  <circle cx="400" cy="190" r="52" fill="white" filter="url(#shadow)"/>
+  <circle cx="400" cy="190" r="44" fill="#EEF2FF"/>
+  <!-- sparkle icon -->
+  <circle cx="400" cy="190" r="20" fill="#6366F1" opacity="0.15"/>
+  <path d="M400 173 L403 185 L415 188 L403 191 L400 203 L397 191 L385 188 L397 185 Z" fill="#6366F1"/>
+  <!-- label below circle -->
+  <rect x="372" y="252" width="56" height="18" rx="9" fill="#6366F1"/>
+  <text x="400" y="265" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white" font-weight="600">Klára AI</text>
+
+  <!-- Arrow right -->
+  <path d="M 452 190 L 490 190" stroke="#6366F1" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <polygon points="490,184 502,190 490,196" fill="#6366F1"/>
+
+  <!-- Right: Outgoing reply card -->
+  <rect x="502" y="100" width="230" height="120" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="502" y="100" width="230" height="8" rx="14" fill="#10B981"/>
+  <rect x="520" y="128" width="90" height="8" rx="4" fill="#D1FAE5"/>
+  <rect x="520" y="144" width="190" height="6" rx="3" fill="#F1F5F9"/>
+  <rect x="520" y="158" width="170" height="6" rx="3" fill="#F1F5F9"/>
+  <rect x="520" y="172" width="130" height="6" rx="3" fill="#F1F5F9"/>
+  <!-- Sent badge -->
+  <rect x="520" y="190" width="60" height="16" rx="8" fill="#D1FAE5"/>
+  <rect x="524" y="196" width="52" height="4" rx="2" fill="#10B981"/>
+
+  <!-- Right: Calendar card below -->
+  <rect x="502" y="238" width="230" height="100" rx="14" fill="white" filter="url(#shadow)"/>
+  <rect x="502" y="238" width="230" height="8" rx="14" fill="#F59E0B"/>
+  <rect x="520" y="264" width="60" height="8" rx="4" fill="#FEF3C7"/>
+  <!-- Calendar grid -->
+  <rect x="520" y="280" width="18" height="18" rx="4" fill="#FEF3C7"/>
+  <rect x="544" y="280" width="18" height="18" rx="4" fill="#FEF3C7"/>
+  <rect x="568" y="280" width="18" height="18" rx="4" fill="#F59E0B"/>
+  <rect x="592" y="280" width="18" height="18" rx="4" fill="#FEF3C7"/>
+  <rect x="616" y="280" width="18" height="18" rx="4" fill="#FEF3C7"/>
+  <!-- Confirmed badge -->
+  <rect x="520" y="308" width="72" height="16" rx="8" fill="#FEF3C7"/>
+  <rect x="524" y="314" width="64" height="4" rx="2" fill="#F59E0B"/>
+
+  <!-- Drop shadow filter -->
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#6366F1" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Bottom label -->
+  <text x="400" y="415" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#94A3B8" letter-spacing="1">Automatizace klientské komunikace • Fotokrám</text>
+</svg>
